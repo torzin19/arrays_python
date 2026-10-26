@@ -3,13 +3,22 @@ cardapio = ['pastel', 'pizza', 'coxinha']
 
 print("Cardápio inicial:", cardapio)
 
-# Adiciona a lasanha ao cardápio
-cardapio.append("lasanha")
-print("Cardápio após adicionar lasanha:", cardapio)
+# Adiciona "lasanha" no COMEÇO da lista (índice 0)
+cardapio.insert(0, "lasanha")
+print("Após insert no começo:", cardapio)
 
-# Remove a lasanha do cardápio
+# Adiciona "empada" no FINAL da lista
+cardapio.append("empada")
+print("Após append no final:", cardapio)
+
+# Remove "lasanha" do cardápio pelo nome
 cardapio.remove("lasanha")
-print("Cardápio após remover lasanha:", cardapio)
+print("Após remove da lasanha:", cardapio)
+
+# Remove o ÚLTIMO item da lista ("empada") usando pop()
+item_removido = cardapio.pop()
+print(f"Item removido com pop(): {item_removido}")
+print("Cardápio após o pop():", cardapio)
 
 # Solicita a escolha do usuário
 pedido = input("O que você quer comer hoje? ")
